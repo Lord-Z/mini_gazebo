@@ -1,0 +1,12 @@
+<launch>
+    
+    <!-- TBM 救援任务 -->
+    <node pkg="tianbot_mini" type="tbm_multi_goals.py" respawn="false" name="multi_goals" output="screen">
+        <!-- X,Y 依次代表 救援点A、B、C、安全区 通过map_load之后，在RVIZ中发布NavGoal，订阅movebaseGoal查阅所对应的 X,Y -->
+        <param name="goalListX" value="[0.8, 0.87, 0.87, 0.62]" />
+        <param name="goalListY" value="[0.0, 0.6, 1.4, 1.6]" />
+        <param name="map_frame" value="map" />
+    </node>
+    
+
+</launch>

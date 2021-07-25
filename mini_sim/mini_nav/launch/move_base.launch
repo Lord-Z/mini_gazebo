@@ -1,0 +1,26 @@
+<launch>
+
+  <!-- TF坐标变换，基础参数 -->
+  <!-- <arg name="laser_frame_id" default="laser" />
+  <arg name="global_frame_id" default="map" />
+  <arg name="base_frame_id" default="base_link" />
+  <arg name="odom_frame_id" default="odom" /> -->
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
+    <rosparam file="$(find mini_nav)/config/base/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find mini_nav)/config/base/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find mini_nav)/config/base/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find mini_nav)/config/base/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find mini_nav)/config/base/base_local_planner_params.yaml" command="load" />
+
+
+    <!-- reset frame_id parameters using user input data -->
+    <!-- <param name="global_costmap/global_frame" value="$(arg global_frame_id)" />
+    <param name="global_costmap/robot_base_frame" value="$(arg base_frame_id)" />
+    <param name="local_costmap/global_frame" value="$(arg odom_frame_id)" />
+    <param name="local_costmap/robot_base_frame" value="$(arg base_frame_id)" /> -->
+    <!-- <param name="DWAPlannerROS/global_frame_id" value="$(arg odom_frame_id)" /> -->
+
+  </node>
+  
+</launch>

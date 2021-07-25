@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="mini" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+  <link   name="base_footprint" />
+
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="0.024924 2.9717E-05 0.025056"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="6.9557E-04"
+        ixy="0"
+        ixz="0"
+        iyy="7.3058E-04"
+        iyz="4.6339E-09"
+        izz="0.00011041" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+   <joint name="base_link_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_footprint" />
+    <child link="base_link" />
+  </joint>
+
+
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-7.23251309203005E-06 0.00462185303459747 2.31999376265613E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0140889906679787" />
+      <inertia
+        ixx="2.40387272862146E-06"
+        ixy="2.4879363665723E-11"
+        ixz="1.54491868199165E-11"
+        iyy="4.21595957294108E-06"
+        iyz="-3.53103166522551E-12"
+        izz="2.40340449711435E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.04545 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="6.4487E-06 -0.0046219 -9.1373E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.014089" />
+      <inertia
+        ixx="2.4038E-06"
+        ixy="4.2889E-11"
+        ixz="-1.8677E-10"
+        iyy="4.216E-06"
+        iyz="-2.0598E-11"
+        izz="2.4035E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.04545 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="caster">
+    <inertial>
+      <origin
+        xyz="-0.002448 1.1256E-06 -0.014939"
+        rpy="0 0 0" />
+      <mass
+        value="0.014141" />
+      <inertia
+        ixx="2.5914E-06"
+        ixy="7.6611E-09"
+        ixz="5.9305E-08"
+        iyy="1.8204E-06"
+        iyz="3.0296E-10"
+        izz="3.4099E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint
+    name="caster_joint"
+    type="continuous">
+    <origin
+      xyz="0.0669 0 0.0132"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+
+  <link
+    name="ball">
+    <inertial>
+      <origin
+        xyz="-6.3856E-08 -9.9546E-06 -2.5161E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0091741" />
+      <inertia
+        ixx="6.4979E-07"
+        ixy="3.8251E-13"
+        ixz="-2.0166E-11"
+        iyy="6.5982E-07"
+        iyz="-1.1949E-12"
+        izz="6.4986E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.55686 0.55686 0.55686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint
+    name="ball_joint"
+    type="continuous">
+    <origin
+      xyz="0.01 7.0418E-05 -0.0223"
+      rpy="0 0 0" />
+    <parent
+      link="caster" />
+    <child
+      link="ball" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="0.0048846 0.00020348 -0.0067816"
+        rpy="0 0 0" />
+      <mass
+        value="0.073208" />
+      <inertia
+        ixx="2.1385E-05"
+        ixy="6.164E-08"
+        ixz="7.7324E-06"
+        iyy="4.15E-05"
+        iyz="4.0193E-09"
+        izz="4.7713E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/lidar_Link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/lidar_Link.dae" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.026633 -0.00020608 0.067613"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+<link name="camera">
+            <inertial>
+                <mass value="0.1" />
+                <origin xyz="0 0 0" />
+                <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                         iyy="0.01" iyz="0.0"
+                         izz="0.01" />
+            </inertial>
+
+            <visual>
+                <origin xyz=" 0 0 0 " rpy="0 0 0" />
+                <geometry>
+                    <box size="0.01 0.026 0.04" />
+                </geometry>
+                <material name="black"/>
+            </visual>
+
+            <collision>
+                <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.01 0.026 0.04" />
+                </geometry>
+            </collision>
+        </link>
+
+         <joint name="camera_joint" type="fixed">
+        <origin xyz="0 0 0.06" rpy="0 0 0" />
+        <parent link="lidar"/>
+        <child link="camera"/>
+    </joint>
+
+
+ <gazebo reference="camera">
+            <sensor type="camera" name="camera_node">
+                <update_rate>30.0</update_rate>
+                <camera name="head">
+                    <horizontal_fov>1.3962634</horizontal_fov>
+                    <image>
+                        <width>1280</width>
+                        <height>720</height>
+                        <format>R8G8B8</format>
+                    </image>
+                    <clip>
+                        <near>0.02</near>
+                        <far>300</far>
+                    </clip>
+                    <noise>
+                        <type>gaussian</type>
+                        <mean>0.0</mean>
+                        <stddev>0.007</stddev>
+                    </noise>
+                </camera>
+                <plugin name="gazebo_camera" filename="libgazebo_ros_camera.so">
+                    <alwaysOn>true</alwaysOn>
+                    <updateRate>0.0</updateRate>
+                    <cameraName>/camera</cameraName>
+                    <imageTopicName>image_raw</imageTopicName>
+                    <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                    <frameName>camera</frameName>
+                    <hackBaseline>0.07</hackBaseline>
+                    <distortionK1>0.0</distortionK1>
+                    <distortionK2>0.0</distortionK2>
+                    <distortionK3>0.0</distortionK3>
+                    <distortionT1>0.0</distortionT1>
+                    <distortionT2>0.0</distortionT2>
+                </plugin>
+            </sensor>
+        </gazebo> 
+
+<gazebo reference="lidar"> 
+            <sensor type="ray" name="rplidar">
+                <pose>0 0 0 0 0 0</pose>
+                <visualize>false</visualize>
+                <update_rate>5.5</update_rate>
+                <ray>
+                    <scan>
+                      <horizontal>
+                        <samples>360</samples>
+                        <resolution>1</resolution>
+                        <min_angle>-3</min_angle>
+                        <max_angle>3</max_angle>
+                      </horizontal>
+                    </scan>
+                    <range>
+                      <min>0.10</min>
+                      <max>6.0</max>
+                      <resolution>0.01</resolution>
+                    </range>
+                    <noise>
+                      <type>gaussian</type>
+                      <mean>0.0</mean>
+                      <stddev>0.01</stddev>
+                    </noise>
+                </ray>
+                <plugin name="gazebo_rplidar" filename="libgazebo_ros_laser.so">
+                    <topicName>/scan</topicName>
+                    <frameName>lidar</frameName>
+                </plugin>
+            </sensor>
+        </gazebo>
+
+<gazebo reference="camera">
+     <material>Gazebo/Black</material>
+ </gazebo>
+
+<gazebo reference="base_link"> 
+     <material>Gazebo/Red </material>
+    </gazebo>
+ <gazebo reference="right_wheel"> 
+     <material>Gazebo/Black </material>
+    </gazebo>
+ <gazebo reference="left_wheel"> 
+     <material>Gazebo/Black </material>
+    </gazebo>
+ <gazebo reference="caster"> 
+     <material>Gazebo/Blue </material>
+    </gazebo>
+
+
+ <!-- Transmission is important to link the joints and the controller -->
+
+        <transmission name="left_wheel_joint_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="left_wheel_joint" >
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="left_wheel_joint_motor">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+
+        <transmission name="right_wheel_joint_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="right_wheel_joint" >
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="right_wheel_joint_motor">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+ 
+<!-- controller -->
+        <gazebo>
+            <plugin name="differential_drive_controller" 
+                    filename="libgazebo_ros_diff_drive.so">
+                <rosDebugLevel>Error</rosDebugLevel>
+                <publishWheelTF>true</publishWheelTF>
+                <robotNamespace>/</robotNamespace>
+                <publishTf>1</publishTf>
+                <publishOdomTF>true</publishOdomTF>
+                <publishWheelJointState>true</publishWheelJointState>
+                <alwaysOn>true</alwaysOn>
+                <updateRate>50.0</updateRate>
+                <legacyMode>true</legacyMode>
+                <leftJoint>left_wheel_joint</leftJoint>
+                <rightJoint>right_wheel_joint</rightJoint>
+                <wheelSeparation>0.1</wheelSeparation>
+                <wheelDiameter>0.043</wheelDiameter>
+                <broadcastTF>1</broadcastTF>
+                <wheelTorque>30</wheelTorque>
+                <wheelAcceleration>1.8</wheelAcceleration>
+                <commandTopic>cmd_vel</commandTopic>
+                <odometryFrame>odom</odometryFrame> 
+                <odometryTopic>odom</odometryTopic> 
+                <odometrySource>world</odometrySource> 
+                <robotBaseFrame>base_footprint</robotBaseFrame>
+            </plugin>
+        </gazebo> 
+
+  <xacro:include filename="$(find mini_description)/urdf/xmaterials.xacro" />
+</robot>

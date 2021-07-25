@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/zyx/learn_ws/devel/include",
+        "/home/zyx/study_ws/devel/include",
+        "/home/zyx/curio_ws/devel/include",
+        "/home/zyx/arm_ws/devel/include",
+        "/home/zyx/catkin_ws/devel/include",
+        "/opt/ros/melodic/include",
+        "/home/zyx/tianbot_mini_ws/src/mini_sim/mini_gazebo/include",
+        "/home/zyx/tianbot_mini_ws/src/mini_sim/mini_nav/include",
+        "/usr/include"
+      ],
+      "name": "Linux"
+    }
+  ]
+}

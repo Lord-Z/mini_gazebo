@@ -1,0 +1,127 @@
+<sdf version='1.6'>
+  <model name='racetrack_v2'>
+    <link name='base_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.028358 -0.052278 -0.00892 0 -0 0</pose>
+        <mass>223.815</mass>
+        <inertia>
+          <ixx>330.42</ixx>
+          <ixy>0.266283</ixy>
+          <ixz>5.21139</ixz>
+          <iyy>438.745</iyy>
+          <iyz>-0.304492</iyz>
+          <izz>545.052</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/base_link.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__wall_collision_1'>
+        <pose frame=''>-1.9794 -0.005 2.0076 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/wall.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__b3_collision_2'>
+        <pose frame=''>0.0131 -0.404994 0.510099 3.14159 -1.57079 -3e-06</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/b3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__d1_collision_3'>
+        <pose frame=''>2.0206 -0.404989 -0.989901 0 -7e-06 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/d1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__d2_collision_4'>
+        <pose frame=''>1.0206 -0.404989 -0.984901 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/d2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__d3_collision_5'>
+        <pose frame=''>0.5231 -0.404989 -0.984901 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/d3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/base_link.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__wall_visual_1'>
+        <pose frame=''>-1.9794 -0.005 2.0076 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/wall.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__b3_visual_2'>
+        <pose frame=''>0.0131 -0.404994 0.510099 3.14159 -1.57079 -3e-06</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/b3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__d1_visual_3'>
+        <pose frame=''>2.0206 -0.404989 -0.989901 0 -7e-06 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/d1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__d2_visual_4'>
+        <pose frame=''>1.0206 -0.404989 -0.984901 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/d2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__d3_visual_5'>
+        <pose frame=''>0.5231 -0.404989 -0.984901 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://racetrack_v2/meshes/d3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

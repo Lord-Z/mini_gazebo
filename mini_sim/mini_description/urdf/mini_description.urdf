@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mini_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.024924 2.9717E-05 0.025056"
+        rpy="0 0 0" />
+      <mass
+        value="0.15009" />
+      <inertia
+        ixx="6.9557E-05"
+        ixy="-1.9995E-08"
+        ixz="1.4394E-05"
+        iyy="7.3058E-05"
+        iyz="4.6339E-09"
+        izz="0.00011041" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-7.23251309203005E-06 0.00462185303459747 2.31999376265613E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0140889906679787" />
+      <inertia
+        ixx="2.40387272862146E-06"
+        ixy="2.4879363665723E-11"
+        ixz="1.54491868199165E-11"
+        iyy="4.21595957294108E-06"
+        iyz="-3.53103166522551E-12"
+        izz="2.40340449711435E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.04545 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="6.4487E-06 -0.0046219 -9.1373E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.014089" />
+      <inertia
+        ixx="2.4038E-06"
+        ixy="4.2889E-11"
+        ixz="-1.8677E-10"
+        iyy="4.216E-06"
+        iyz="-2.0598E-11"
+        izz="2.4035E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.04545 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="caster">
+    <inertial>
+      <origin
+        xyz="-0.002448 1.1256E-06 -0.014939"
+        rpy="0 0 0" />
+      <mass
+        value="0.014141" />
+      <inertia
+        ixx="2.5914E-06"
+        ixy="7.6611E-09"
+        ixz="5.9305E-08"
+        iyy="1.8204E-06"
+        iyz="3.0296E-10"
+        izz="3.4099E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/caster.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/caster.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint"
+    type="continuous">
+    <origin
+      xyz="0.0669 0 0.0132"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="ball">
+    <inertial>
+      <origin
+        xyz="-6.3856E-08 -9.9546E-06 -2.5161E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0091741" />
+      <inertia
+        ixx="6.4979E-07"
+        ixy="3.8251E-13"
+        ixz="-2.0166E-11"
+        iyy="6.5982E-07"
+        iyz="-1.1949E-12"
+        izz="6.4986E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.55686 0.55686 0.55686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ball_joint"
+    type="continuous">
+    <origin
+      xyz="0.01 7.0418E-05 -0.0223"
+      rpy="0 0 0" />
+    <parent
+      link="caster" />
+    <child
+      link="ball" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="0.0048846 0.00020348 -0.0067816"
+        rpy="0 0 0" />
+      <mass
+        value="0.073208" />
+      <inertia
+        ixx="2.1385E-05"
+        ixy="6.164E-08"
+        ixz="7.7324E-06"
+        iyy="4.15E-05"
+        iyz="4.0193E-09"
+        izz="4.7713E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_description/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.026633 -0.00020608 0.067613"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
